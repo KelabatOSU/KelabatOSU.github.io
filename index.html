@@ -80,23 +80,34 @@
             margin-bottom: 20px;
             background-color: white;
             border-radius: 10px;
+            display: flex;
+            align-items: center;
         }
-        
+
         section + section {
             border-top: 1px solid #ccc;
         }
-        
+
         section .container {
-            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        /* Lab Images */
+        .bio-text {
+            max-width: 50%;
+        }
+
+        .lab-image {
+            max-width: 40%;
+            text-align: right;
+        }
+
         .lab-image img {
             width: 100%;
             max-width: 600px; /* Resize images */
             height: auto;
             border-radius: 8px;
-            margin-top: 20px;
         }
 
         /* Footer */
@@ -149,19 +160,17 @@
     <!-- Bioinformatics and Machine Learning Section -->
     <section id="bioinformatics">
         <div class="container">
-            <div class="bio-content">
-                <div class="bio-text">
-                    <h2>Bioinformatics and Machine Learning</h2>
-                    <p>
-                        Our lab specializes in bioinformatics and machine learning approaches to analyze microbiome data. 
-                        We develop computational pipelines to process metagenomic sequencing data, identify microbial 
-                        signatures associated with disease states, and apply machine learning techniques to predict 
-                        disease outcomes and therapeutic responses.
-                    </p>
-                </div>
-                <div class="lab-image">
-                    <img src="lab1.png" alt="Lab Image 1">
-                </div>
+            <div class="bio-text">
+                <h2>Bioinformatics and Machine Learning</h2>
+                <p>
+                    Our lab specializes in bioinformatics and machine learning approaches to analyze microbiome data. 
+                    We develop computational pipelines to process metagenomic sequencing data, identify microbial 
+                    signatures associated with disease states, and apply machine learning techniques to predict 
+                    disease outcomes and therapeutic responses.
+                </p>
+            </div>
+            <div class="lab-image">
+                <img src="lab1.png" alt="Lab Image 1">
             </div>
         </div>
     </section>
@@ -169,13 +178,15 @@
     <!-- Host-Microbiota Interactions -->
     <section id="host-microbiota">
         <div class="container">
-            <h2>Host-Microbiota Interactions</h2>
-            <p>
-                We investigate how host-microbiota interactions shape health and disease, focusing on immune responses, 
-                metabolite production, and pathogen resistance. Our research integrates multi-omics data to uncover 
-                key microbial players in gastrointestinal diseases, such as inflammatory bowel disease (IBD) and 
-                pancreatic cancer.
-            </p>
+            <div class="bio-text">
+                <h2>Host-Microbiota Interactions</h2>
+                <p>
+                    We investigate how host-microbiota interactions shape health and disease, focusing on immune responses, 
+                    metabolite production, and pathogen resistance. Our research integrates multi-omics data to uncover 
+                    key microbial players in gastrointestinal diseases, such as inflammatory bowel disease (IBD) and 
+                    pancreatic cancer.
+                </p>
+            </div>
             <div class="lab-image">
                 <img src="lab2.png" alt="Lab Image 2">
             </div>
@@ -185,12 +196,14 @@
     <!-- Microbiome-Based Therapeutics -->
     <section id="microbiome-therapeutics">
         <div class="container">
-            <h2>Microbiome-Based Therapeutics</h2>
-            <p>
-                We aim to translate microbiome research into clinical applications by developing microbiome-based 
-                therapeutics. Our work involves identifying beneficial microbial strains, engineering probiotics, 
-                and testing novel microbial interventions for gastrointestinal and systemic diseases.
-            </p>
+            <div class="bio-text">
+                <h2>Microbiome-Based Therapeutics</h2>
+                <p>
+                    We aim to translate microbiome research into clinical applications by developing microbiome-based 
+                    therapeutics. Our work involves identifying beneficial microbial strains, engineering probiotics, 
+                    and testing novel microbial interventions for gastrointestinal and systemic diseases.
+                </p>
+            </div>
             <div class="lab-image">
                 <img src="lab3.png" alt="Lab Image 3">
             </div>
