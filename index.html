@@ -7,17 +7,23 @@
     <title>Shanlin Ke | About</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Reset default margins and paddings */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
             background-color: #f4f4f4;
         }
         
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 0 40px;  /* Adds space on both left and right */
+            padding-left: 20px;
+            padding-right: 20px;
         }
 
         /* Header */
@@ -29,14 +35,15 @@
 
         header .container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center; /* Ensures even spacing */
             align-items: center;
+            gap: 20px;
         }
 
         /* Title Section (Left) */
         .title-section {
+            flex-grow: 1; /* Allows it to take available space */
             text-align: left;
-            flex: 1;
         }
 
         .title-section h1 {
@@ -46,7 +53,6 @@
 
         .title-section p {
             font-size: 1rem;
-            margin: 0;
             line-height: 1.5;
         }
 
@@ -55,26 +61,20 @@
             list-style: none;
             display: flex;
             gap: 20px;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
         }
 
         nav ul li a {
             text-decoration: none;
             color: #3182bd;
             font-weight: bold;
-            font-size: 1.5rem;  /* Increased font size */
+            font-size: 1.5rem;
         }
 
         nav ul li a:hover {
             text-decoration: underline;
         }
 
-        /* About Section */
+        /* Section Styling */
         section {
             padding: 30px 0;
             margin-bottom: 20px;
@@ -84,10 +84,6 @@
             align-items: center;
         }
 
-        section + section {
-            border-top: 1px solid #ccc;
-        }
-
         section .container {
             display: flex;
             justify-content: space-between;
@@ -95,16 +91,16 @@
         }
 
         .bio-text {
-            max-width: 50%;
+            max-width: 55%; /* Adjusted for better balance */
         }
 
         .lab-image {
-            max-width: 40%;
+            max-width: 35%; /* Adjusted */
             text-align: right;
         }
 
         .lab-image img {
-            width: 80%;  /* Reduced image size by 20% */
+            width: 80%;
             height: auto;
             border-radius: 8px;
         }
@@ -117,17 +113,11 @@
             padding: 1rem 0;
             width: 100%;
         }
-
-        footer .container {
-            padding: 0 20px;
-        }
-
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <!-- Title Section (Left) -->
             <div class="title-section">
                 <h1>Ke Lab</h1>
                 <h2>Shanlin Ke, Ph.D.</h2>
@@ -138,7 +128,6 @@
                 </p>
             </div>
 
-            <!-- Navigation Bar (Right) -->
             <nav>
                 <ul>
                     <li><a href="index.html">About</a></li>
@@ -156,7 +145,6 @@
         </div>
     </header>
 
-    <!-- Bioinformatics and Machine Learning Section -->
     <section id="bioinformatics">
         <div class="container">
             <div class="bio-text">
@@ -165,9 +153,7 @@
                     The human microbiome comprises bacteria, archaea, viruses, and eukaryotes which reside in or on our bodies. 
                     These organisms impact human physiology, both in health and in disease, contributing to the enhancement or impairment 
                     of metabolic and immune functions. Our lab specializes in bioinformatics and machine learning approaches to analyze the 
-                    human microbiome data. We develop computational pipelines to process metagenomic sequencing data, identify microbial 
-                    signatures associated with disease states, and apply machine learning techniques to handle the complex microbiome
-                    and other multi-omics data.
+                    human microbiome data.
                 </p>
             </div>
             <div class="lab-image">
@@ -176,7 +162,6 @@
         </div>
     </section>
 
-    <!-- Host-Microbiota Interactions -->
     <section id="host-microbiota">
         <div class="container">
             <div class="bio-text">
@@ -184,9 +169,6 @@
                 <p>
                     Host-microbiota interactions are the complex chemical and signaling processes between the body's cells 
                     and tiny microbes that live in/on it. These interactions are essential for the body's overall health. 
-                    We investigate how host-microbiota interactions shape health and disease, focusing on pancreatic diseases. 
-                    Our research integrates computational and experimental approaches as well as multi-omics data to uncover key microbial 
-                    players and their mechanism in pancreatic diseases, such as pancreatitis and pancreatic cancer.
                 </p>
             </div>
             <div class="lab-image">
@@ -195,15 +177,14 @@
         </div>
     </section>
 
-    <!-- Microbiome-Based Therapeutics -->
     <section id="microbiome-therapeutics">
         <div class="container">
             <div class="bio-text">
                 <h2>Microbiome-Based Therapeutics</h2>
                 <p>
                     We aim to translate microbiome research into clinical applications by developing microbiome-based 
-                    therapeutics. Our work involves identifying beneficial microbial strains, engineering probiotics, antimicrobial peptides,
-                    and testing novel microbial interventions for pancreatic diseases and other chronic and infectious diseases.
+                    therapeutics. Our work involves identifying beneficial microbial strains, engineering probiotics, and 
+                    testing novel microbial interventions for pancreatic diseases.
                 </p>
             </div>
             <div class="lab-image">
@@ -212,7 +193,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>© 2025 Shanlin Ke | Built with GitHub Pages</p>
