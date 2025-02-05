@@ -14,30 +14,41 @@
             background-color: #f4f4f4;
         }
         .container {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 0 20px; /* Add some padding on the sides */
+            padding: 0 20px;
         }
 
-    header {
-        background-color: #333;
-        color: white;
-    }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            position: relative;
+        }
 
-    header .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;  /* Vertically center the content */
-        padding: 2rem 0;
-    }
-        /* Title and Description */
+        header .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Lab Icon */
+        .lab-icon {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Title Section */
         .title-section {
-            text-align: left;
-            flex: 1;
+            text-align: center;
         }
 
         .title-section h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 0.5rem;
         }
 
@@ -47,11 +58,17 @@
         }
 
         /* Navigation Links */
+        nav {
+            margin-top: 10px;
+        }
+
         nav ul {
             list-style: none;
             display: flex;
-            gap: 40px;
-            margin: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 0;
         }
 
         nav ul li {
@@ -62,6 +79,7 @@
             text-decoration: none;
             color: #007bff;
             font-weight: bold;
+            padding: 5px 10px;
         }
 
         nav ul li a:hover {
@@ -75,14 +93,33 @@
             background-color: white;
             border-radius: 10px;
         }
-        
+
         section + section {
-            border-top: 1px solid #ccc;  /* Gray line between sections */
+            border-top: 1px solid #ccc;
         }
-        
+
         section .container {
             padding: 20px;
         }
+
+        /* Biography */
+        .bio-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .bio-text {
+            flex: 1;
+        }
+
+        .bio-image img {
+            max-width: 200px; /* Resize image */
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Footer */
         footer {
             background-color: #333;
             color: white;
@@ -98,104 +135,105 @@
 </head>
 <body>
     <header>
+        <img src="lab.png" alt="Lab Icon" class="lab-icon"> <!-- Lab Icon -->
         <div class="container">
-        <!-- Title Section -->
-        <div class="title-section">
-            <h1>Shanlin Ke</h1>
-            <p>Assistant Professor<br>Department of Internal Medicine, Ohio State University<br>Division of Gastroenterology Hepatology and Nutrition, Columbus, OH 43210<br>ke.229@osu.edu or spske@channing.harvard.edu</p>
-        </div>
+            <!-- Title Section -->
+            <div class="title-section">
+                <h1>Shanlin Ke</h1>
+                <p>Assistant Professor<br>Department of Internal Medicine, Ohio State University<br>Division of Gastroenterology, Hepatology and Nutrition, Columbus, OH 43210<br>ke.229@osu.edu or spske@channing.harvard.edu</p>
+            </div>
 
-        <!-- Navigation Bar -->
-        <nav>
-            <ul>
-                <li><a href="index.html">About</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="people.html">People</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="talks.html">Talks</a></li>
-                <li><a href="CV.html">CV</a></li>
-                <li><a href="publicity.html">Publicity</a></li>
-                <li><a href="tools.html">Tools</a></li>
-                <li><a href="positions.html">Positions</a></li>
-                <li><a href="news.html">News</a></li>
-            </ul>
-        </nav>
+            <!-- Navigation Bar -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="talks.html">Talks</a></li>
+                    <li><a href="CV.html">CV</a></li>
+                    <li><a href="publicity.html">Publicity</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="positions.html">Positions</a></li>
+                    <li><a href="news.html">News</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <!-- About Section -->
     <section id="about">
         <div class="container">
-            <section id="bio">
-                <!-- About Section -->
-                <section id="about">
-                    <div class="bio-content">
-                        <div class="bio-text">
-                            <h2>Biography</h2>
-                            <p>
-                               Dr. Ke is an incoming Assistant Professor at the Ohio State University. We are a research group at the Ohio State University focuses 
-                               on developing methodologies and utilizing bioinformatics tools, metagenomic sequencing, machine learning techniques, and animal models to 
-                               understand the role of the human microbiome in chronic and infectious diseases. We are especially interested in how the human microbiome 
-                               interect with pancreas and its role in pancreatitis and pancreatic cancer.
-                            </p>
-                        </div>
-                        <div class="bio-image">
-                            <img src="IMG_8960.png" alt="Your Name" />
-                        </div>
-                    </div>
-        </section>
+            <div class="bio-content">
+                <div class="bio-text">
+                    <h2>Biography</h2>
+                    <p>
+                        Dr. Ke is an incoming Assistant Professor at the Ohio State University. We are a research group at the Ohio State University focused 
+                        on developing methodologies and utilizing bioinformatics tools, metagenomic sequencing, machine learning techniques, and animal models to 
+                        understand the role of the human microbiome in chronic and infectious diseases. We are especially interested in how the human microbiome 
+                        interacts with the pancreas and its role in pancreatitis and pancreatic cancer.
+                    </p>
+                </div>
+                <div class="bio-image">
+                    <img src="IMG_8960.png" alt="Shanlin Ke"> <!-- Resized Image -->
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="positions">
+        <div class="container">
             <h2>Academic Positions</h2>
-                <div class="position">
-                    <div class="institution">
-                        <strong>Ohio State University</strong><br>
-                        Assistant Professor
-                    </div>
-                    <div class="details">
-                        Columbus, OH<br>
-                        2025/6 - present
-                    </div>
+            <div class="position">
+                <div class="institution">
+                    <strong>Ohio State University</strong><br>
+                    Assistant Professor
                 </div>
+                <div class="details">
+                    Columbus, OH<br>
+                    2025/6 - present
+                </div>
+            </div>
 
-                <div class="position">
-                    <div class="institution">
-                        <strong>Harvard Medical School</strong><br>
-                        Postdoc
-                    </div>
-                    <div class="details">
-                        Boston, MA<br>
-                        2021 - 2025
-                    </div>
+            <div class="position">
+                <div class="institution">
+                    <strong>Harvard Medical School</strong><br>
+                    Postdoc
                 </div>
-            </section>
+                <div class="details">
+                    Boston, MA<br>
+                    2021 - 2025
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <section id="education">
-                <h2>Education</h2>
-                <div class="position">
-                    <div class="institution">
-                        <strong>University of Science and Technology of China</strong><br>
-                        Ph.D. in Theoretical Physics
-                    </div>
-                    <div class="details">
-                        Hefei<br>
-                        2012 - 2015
-                    </div>
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="position">
+                <div class="institution">
+                    <strong>University of Science and Technology of China</strong><br>
+                    Ph.D. in Theoretical Physics
                 </div>
-                
-                <div class="position">
-                    <div class="institution">
-                        <strong>Southwest University</strong><br>
-                        B.S. in Physics
-                    </div>
-                    <div class="details">
-                        Chongqing<br>
-                        2004 - 2008
-                    </div>
+                <div class="details">
+                    Hefei<br>
+                    2012 - 2015
                 </div>
-            </section>
-
-                
+            </div>
+            
+            <div class="position">
+                <div class="institution">
+                    <strong>Southwest University</strong><br>
+                    B.S. in Physics
+                </div>
+                <div class="details">
+                    Chongqing<br>
+                    2004 - 2008
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
