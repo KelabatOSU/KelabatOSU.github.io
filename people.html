@@ -89,6 +89,20 @@
 
         .team-member {
             margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .team-member .bio {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .team-member img {
+            max-width: 180px;
+            border-radius: 50%;
+            height: auto;
         }
 
         .team-member h2 {
@@ -139,20 +153,28 @@
 
     <section>
         <div class="container">
+            <!-- Team Member: PI Shanlin Ke -->
             <div class="team-member">
-                <h2>PI: Shanlin Ke</h2>
-                <p class="role">Principal Investigator (PI)</p>
-                <p class="expertise">
-                    Shanlin Ke’s research focuses on the intersection of cancer, microbiota, and immunology. His work investigates microbial communities in cancer progression, the immune response to these microbes, and how microbiota can be leveraged for therapeutic applications. Shanlin's expertise includes microbial metagenomics, host-microbe interactions, cancer immunology, and computational analysis of microbial data.
-                </p>
+                <div class="bio">
+                    <h2>PI: Shanlin Ke</h2>
+                    <p class="role">Principal Investigator (PI)</p>
+                    <p class="expertise">
+                        Shanlin Ke’s research focuses on the intersection of cancer, microbiota, and immunology. His work investigates microbial communities in cancer progression, the immune response to these microbes, and how microbiota can be leveraged for therapeutic applications. Shanlin's expertise includes microbial metagenomics, host-microbe interactions, cancer immunology, and computational analysis of microbial data.
+                    </p>
+                </div>
+                <img src="IMG_8960.png" alt="Shanlin Ke">
             </div>
 
+            <!-- Other Team Members -->
             <div class="team-member">
-                <h2>Postdoc: XXX</h2>
-                <p class="role">Postdoctoral Researcher</p>
-                <p class="expertise">
-                    XXX's research focuses on [Insert specific research topic]. Their expertise includes [Insert relevant skills, techniques, and research areas]. They are particularly interested in [mention specific focus within the lab’s research themes].
-                </p>
+                <div class="bio">
+                    <h2>Postdoc: XXX</h2>
+                    <p class="role">Postdoctoral Researcher</p>
+                    <p class="expertise">
+                        XXX's research focuses on [Insert specific research topic]. Their expertise includes [Insert relevant skills, techniques, and research areas]. They are particularly interested in [mention specific focus within the lab’s research themes].
+                    </p>
+                </div>
+                <img src="path_to_image" alt="XXX's image">
             </div>
 
             <!-- Add additional team members below -->
@@ -168,7 +190,7 @@
 
     <footer>
         <div class="container">
-            <p>© 2024 Shanlin Ke | Built with GitHub Pages</p>
+            <p>© 2025 Shanlin Ke | Built with GitHub Pages</p>
         </div>
     </footer>
 </body>
